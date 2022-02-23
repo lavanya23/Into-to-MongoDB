@@ -32,6 +32,7 @@ NOTE: 2 is count of documents which will be skipped
 sort
 show sorted result
 db.collection.find().sort({fieldName: 1})
+Example : db.collection.find().sort({name: 1})
 NOTE: 1 is ascending and -1 is descending
 
 count
