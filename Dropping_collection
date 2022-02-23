@@ -1,0 +1,7 @@
+delete collection
+
+db.collection.drop()
+db.collection.remove():
+remove method is used to remove collection
+ 
+This is not equal to the drop() method. The difference is drop() is used to remove all the documents inside a collection, but the remove() method is used to delete all the documents along with the collection itself.
