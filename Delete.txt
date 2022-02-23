@@ -1,0 +1,16 @@
+The delete operations remove the documents from the collection. MongoDB provides the following methods to delete the documents of the collection.
+
+db.collection.deleteOne()
+db.collection.deleteMany()
+
+db.operate.deleteOne(
+  { name : "Krunal Lathiya" }
+)
+
+So, it will remove the document which has the name Krunal Lathiya.
+
+Same syntax but deleteMany function, which deletes all the documents with the provided name.
+
+To delete documents based on certain criteria, we can use the filter operators that we used for the read and update operation:
+
+db.users.deleteMany( { status: { $in: [ "dormant", "inactive" ] } } )
