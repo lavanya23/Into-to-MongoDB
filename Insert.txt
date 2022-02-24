@@ -1,5 +1,6 @@
 insert document
-you can define variable (js syntax) and pass it as excepted parameter.
+
+###you can define variable (js syntax) and pass it as excepted parameter.
 
 var user = {
   name: "Mohammad MohammadAlian",
@@ -8,11 +9,12 @@ var user = {
 };
 
 db.insertOne(user);
+
 OR
 
 db.collection.insertOne({name: 'Mohammad MohammadAlian', ip: '127.0.0.1', lastLoginTime: 1575704736});
 
-to insert many object in one query you can use insertMany function
+####to insert many object in one query you can use insertMany function
 
 var users = [
   {
@@ -24,6 +26,7 @@ var users = [
 ];
 
 db.insertMany(users);
+
 OR
 
 db.collection.insertMany([{name: 'Mohammad MohammadAlian', ip: '127.0.0.1', lastLoginTime: 1575704736}, {name: 'John Doe', ip: '10.10.10.10', lastLoginTime: 1575704965}]);
