@@ -1,0 +1,15 @@
+#Create Non-Capped Collection
+db.createCollection('collection_name')
+
+#Create Capped Collection
+db.createCollection("mySecondCollection", {capped:true,size:2,max:2)
+
+#Show list of collections
+show collections
+
+#rename collection
+db.collection.renameCollection('newCollectionName');
+
+
+delete collection
+db.collection.remove({})
