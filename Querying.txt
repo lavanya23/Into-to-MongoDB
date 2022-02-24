@@ -1,90 +1,91 @@
 Querying
-find
+##find
 
-retrieve all of documents
+##retrieve all of documents
 db.collection.find() OR db.collection.find({})
 
-query by value of specific field
+##query by value of specific field
 db.collection.find({name: 'Mohammad MohammadAlian'})
 
-querying throw nested field
+##querying throw nested field
 var user = { name: "John", job: { title: "programmer", salary: 125000 } };
 
-if we want to find above user by job title we could use following command
+##if we want to find above user by job title we could use following command
 db.collection.find({'job.title': 'programmer'})
 
-using regex
+##using regex
 db.collection.find({name: /M.*/})
 
-pretty
-make results pretty 😁
+##pretty
+##make results pretty 😁
 db.collection.find().pretty()
 
-limit
+##limit
 db.collection.find().limit(10)
-NOTE: 10 is count of documents which will be retrieved
+##NOTE: 10 is count of documents which will be retrieved
 
-skip
-skip result
+##skip
+##skip result
 db.collection.find().skip(2)
-NOTE: 2 is count of documents which will be skipped
+##NOTE: 2 is count of documents which will be skipped
 
-sort
-show sorted result
+##sort
+##show sorted result
 db.collection.find().sort({fieldName: 1})
 Example : db.collection.find().sort({name: 1})
-NOTE: 1 is ascending and -1 is descending
+##NOTE: 1 is ascending and -1 is descending
 
-count
-retrieve count of results
+##count
+##retrieve count of results
 db.collection.find().count()
 
-distinct
-retrieve distinct value
+##distinct
+##retrieve distinct value
 db.collection.distinct('name')
-NOTE: name is a field
+##NOTE: name is a field
 
-for nested field we can use following command
+##for nested field we can use following command
 db.collection.distinct('comments.message')
 
-Operators
-less than
+##Operators
+
+##less than
 db.collection.find({field: {$lt: 200}})
 
-less than or equal
+##less than or equal
 db.collection.find({field: {$lte: 200}})
 
-greater than
+##greater than
 db.collection.find({field: {$gt: 200}})
 
-greater than or equal
+##greater than or equal
 db.collection.find({field: {$gte: 200}})
 
-not equal
+##not equal
 db.collection.find({field: {$ne: 'string is also accepted in some operators'}})
 
-in
+##in
 db.collection.find({field: {$in: [1999,2010,2019,2022]}})
 
-all
+##all
 db.collection.find({field: {$all: [1999,2010]}})
 
-slice
+##slice
 db.collection.find({arrayField: {$slice: 3}})
 
-or
+##or
 db.collection.find({$or: [{filed: 'value'}, {field: 'value'}]})
 
-mod
+##mod
 modulo operator db.collection.find({field: {$mod: [100,0]}})
 
-size
+##size
 db.collection.find({arrayFiled: {$size: 2}})
 
-exists
+##exists
 db.collection.find({field: {$exists: true}})
 
-type
+##type
 type numbers db.collection.find({field: {$type: 2}})
 
 
