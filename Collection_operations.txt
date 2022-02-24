@@ -11,5 +11,5 @@ show collections
 db.collection.renameCollection('newCollectionName');
 
 
-delete collection
+#delete collection
 db.collection.remove({})
